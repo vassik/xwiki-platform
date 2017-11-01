@@ -67,7 +67,10 @@ def build_docker_image(dockerfile_path, docker_image_name, sut_folder):
 	dockerfile_abs = os.path.join(SCRIPT_ABSOLUTE_PATH, dockerfile_path)
 
 	print "Copying SUT from " + sut_folder
-	ignore_config_testing = lambda directory, contents: ['config-testing'] if os.path.isdir(os.path.join(directory, 'config-testing')) and 'config-testing' in contents else []
+	ignore_config_testing = lambda directory, contents: ['config-testing', '.git'] \
+		if (os.path.isdir(os.path.join(directory, 'config-testing')) and 'config-testing' in contents) or \
+			(os.path.isdir(os.path.join(directory, '.git')) and '.git' in contents) else []
+
 	shutil.copytree(sut_folder, dockerfile_abs + "/xwiki-platform-distribution-flavor-test-misc", symlinks=False, ignore=ignore_config_testing)
 	
 	command = ['docker', 'build', '--rm', '-t', docker_image_name, '.']
