@@ -26,7 +26,7 @@ RUN mkdir workingdir \
 	openssh-server \
 	ant \
 	ant-optional \
-	python 2.7 \
+	python2.7 && \
 	ln -s /usr/bin/python2.7 /usr/bin/python
 
 #copy everything
