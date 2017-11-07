@@ -22,13 +22,8 @@ RUN mkdir workingdir \
 	&& apt-get -qq update \
 	&& apt-get install --no-install-recommends -qqy \
 	sshpass \
-	curl \
 	ca-certificates \
 	openssh-server \
-	gcc \
-	make \
-	nodejs \
-	npm \
 	ant \
 	ant-optional
 
