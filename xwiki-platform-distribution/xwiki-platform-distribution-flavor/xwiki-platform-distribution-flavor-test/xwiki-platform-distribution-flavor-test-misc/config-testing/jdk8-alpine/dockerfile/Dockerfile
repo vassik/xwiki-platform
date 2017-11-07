@@ -19,13 +19,14 @@ FROM maven:3.5.2-jdk-8-alpine
 MAINTAINER Anatoly Vasilevskiy <Anatoly.Vasilevskiy@sintef.no>
 
 RUN mkdir workingdir \
-	&& apt-get -qq update \
-	&& apt-get install --no-install-recommends -qqy \
+	&& apk -qq update \
+	&& apk add \
 	sshpass \
 	ca-certificates \
 	openssh-server \
 	ant \
-	ant-optional
+	ant-optional \
+	python
 
 #copy everything
 COPY settings.xml /root/.m2/settings.xml
