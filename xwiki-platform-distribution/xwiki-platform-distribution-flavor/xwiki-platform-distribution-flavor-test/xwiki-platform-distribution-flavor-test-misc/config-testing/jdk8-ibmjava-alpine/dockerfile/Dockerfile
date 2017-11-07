@@ -24,8 +24,7 @@ RUN mkdir workingdir \
 	sshpass \
 	ca-certificates \
 	openssh-server \
-	ant \
-	ant-optional \
+	apache-ant \
 	python
 
 #copy everything
