@@ -15,7 +15,7 @@
 # information regarding copyright ownership.
 #
 
-FROM maven:3.5.2-jdk-8
+FROM maven:3.5.2-jdk-8-slim
 MAINTAINER Anatoly Vasilevskiy <Anatoly.Vasilevskiy@sintef.no>
 
 RUN mkdir workingdir \
