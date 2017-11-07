@@ -23,9 +23,7 @@ RUN mkdir workingdir \
 	&& apk add \
 	sshpass \
 	ca-certificates \
-	openssh-server \
-	ant \
-	ant-optional \
+	apache-ant \
 	python
 
 #copy everything
