@@ -26,8 +26,7 @@ RUN mkdir workingdir \
 	openssh-server \
 	ant \
 	ant-optional \
-	python2.7 && \
-	ln -s /usr/bin/python2.7 /usr/bin/python
+	python2.7
 
 #copy everything
 COPY settings.xml /root/.m2/settings.xml

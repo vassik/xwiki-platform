@@ -25,7 +25,9 @@ RUN mkdir workingdir \
 	ca-certificates \
 	openssh-server \
 	ant \
-	ant-optional
+	ant-optional \
+	python2.7 && \
+	ln -s /usr/bin/python2.7 /usr/bin/python
 
 #copy everything
 COPY settings.xml /root/.m2/settings.xml
