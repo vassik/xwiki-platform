@@ -16,6 +16,7 @@
 # information regarding copyright ownership.
 #
 
+import re
 import os
 import sys
 import subprocess
