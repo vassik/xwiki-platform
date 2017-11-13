@@ -23,6 +23,7 @@ RUN mkdir workingdir \
 	&& apk add \
 	sshpass \
 	ca-certificates \
+	openssh \
 	apache-ant \
 	python
 
